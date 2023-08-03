@@ -8,8 +8,10 @@
 </head>
 <body>
     <script type="text/javascript">
-        fetch('http://gateway.marvel.com/v1/public/comics?ts=1691088419&apikey=bc6189e1f8f98580674b7c342aa1d163&hash=c6131ab9c3861fd34ca3e7b2d7f89801').then((response)=>{
+        fetch('http://gateway.marvel.com/v1/public/comics?ts=1691088785&apikey=c703b4efeca0fba44b3282021d892176&hash=66a6c830908eb3e61680b91f278e4667').then((response)=>{
             return response.json();
+        }).then((jsonParsed) =>{
+            console.log(jsonParsed);
         })
     </script>
 </body>
