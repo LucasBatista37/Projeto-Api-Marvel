@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,7 @@
     <title>API Marvel</title>
 </head>
 <body>
-    <style type="text/css">
+    <style>
         img{
             width: 300px;
             border-bottom-style: solid;
@@ -15,7 +15,6 @@
             border-top-right-radius: 16px;
         }
         .personagem{
-
             width: 300px;
             margin: 20px;
             border-radius: 16px;
@@ -25,35 +24,35 @@
     <div id="personagens" style="display: flex; flex-wrap: wrap; justify-content: space-between;"></div>
     
     <script type="text/javascript">
-        fetch('http://gateway.marvel.com/v1/public/comics?ts=1691088785&apikey=c703b4efeca0fba44b3282021d892176&hash=66a6c830908eb3e61680b91f278e4667').then((response)=>{
-            return response.json();
-        }).then((jsonParsed) => {
+        fetch('http://gateway.marvel.com/v1/public/comics?ts=1691088785&apikey=c703b4efeca0fba44b3282021d892176&hash=66a6c830908eb3e61680b91f278e4667')
+        .then(response => response.json())
+        .then(jsonParsed => {
             const divPersonagem = document.querySelector('#personagens');
 
-            jsonParsed.data.results.forEach(element =>{
-                const srcImage = element.thumbnail.path + "." + element.thumbnail.extension
-                const nomePersonagem = element.name
-            })
+            jsonParsed.data.results.forEach(element => {
+                const srcImage = element.thumbnail.path + "." + element.thumbnail.extension;
+                const nomePersonagem = element.name;
+                createDivPersonagem(srcImage, nomePersonagem, divPersonagem);
+            });
+            
             function createDivPersonagem(srcImage, nomePersonagem, divToAppend){
+                const divPai = document.createElement('div');
+                const divFilho = document.createElement('div');
+                const textName = document.createElement('text'); 
+                const img = document.createElement('img');
 
-                const divPai = document.createElement('div')
-                const divFilho = document.createElement('div')
-                const textName = document.createElemet('text')
-                const img = document.createElement('img')
+                textName.textContent = nomePersonagem;
+                img.src = srcImage;
 
-                textName.textContent = nomePersonagem
-                img.src = srcImage
+                divFilho.appendChild(img);
+                divFilho.appendChild(textName);
+                divPai.appendChild(divFilho);
+                divToAppend.appendChild(divPai);
 
-                divFilho.appendChild(img)
-                divFilho.appendChild(textName)
-                divPai.appendChild(divFilho)
-                divToAppend.appendChild(divPai)
-
-                divPai.classList.add("personagem")
+                divPai.classList.add("personagem");
             }
-
             console.log(jsonParsed);
-        })
+        });
     </script>
 </body>
 </html>
