@@ -21,3 +21,30 @@ body{
     justify-content: center;
 }
 
+header .logo{
+    width: 0px;
+    margin: 20px;
+    size: 100px;
+}
+
+input{
+    width: 30%;
+    height: 20%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#procurar{
+    background-color: #ffffff; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: bold;
+    font-size: 8px; 
+    margin-bottom: 20px;
+}

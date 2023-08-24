@@ -1,9 +1,10 @@
 var personagens = document.getElementById('personagens');
 var pesquisar = document.getElementById('pesquisar');
+var botao = document.getElementById('procurar')
 
 var personagens = [
-    { name: '3-D Man' },
-    { name: 'A-Bomb (HAS)' },
+    { nomePersonagem: '3-D Man' },
+    { nomePersonagem: 'A-Bomb (HAS)' },
 ];
 
 function pesquisarPersonagens(termoPesquisa, personagens) {
@@ -12,10 +13,8 @@ function pesquisarPersonagens(termoPesquisa, personagens) {
     );
 }
 
-exibirPersonagens(personagensFiltrados);
-
 campoPesquisa.addEventListener('input', () => {
-const termoPesquisa = campoPesquisa.value;
+var termoPesquisa = campoPesquisa.value;
 pesquisarPersonagens(termoPesquisa);
 });
 
