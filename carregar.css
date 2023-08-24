@@ -1,0 +1,6 @@
+#personagens {
+    max-height: 80vh;
+
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #f0f0f0;
+}
