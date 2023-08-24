@@ -11,3 +11,13 @@ img{
     border-radius: 16px;
     text-align: center;
 }
+
+body{
+    background-color: red;
+}
+
+.pesquisa{
+    display: flex;
+    justify-content: center;
+}
+

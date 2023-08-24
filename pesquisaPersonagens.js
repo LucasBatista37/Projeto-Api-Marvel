@@ -1,7 +1,7 @@
 var personagens = document.getElementById('personagens');
 var pesquisar = document.getElementById('pesquisar');
 
-const personagens = [
+var personagens = [
     { name: '3-D Man' },
     { name: 'A-Bomb (HAS)' },
 ];
