@@ -13,38 +13,54 @@ img{
 }
 
 body{
-    background-color: red;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
 }
 
 .pesquisa{
     display: flex;
     justify-content: center;
-}
-
-header .logo{
-    width: 0px;
     margin: 20px;
-    size: 100px;
 }
 
-input{
-    width: 30%;
-    height: 20%;
-    padding: 6px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+#inputPesquisar{
+    width: 50%;
+    padding: 10px;
+    border: none;
     border-radius: 4px;
-    box-sizing: border-box;
+    background-color: #f00;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(250, 250, 250, 0.1);
 }
 
-#procurar{
-    background-color: #ffffff; 
-    color: white; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer; 
-    font-weight: bold;
-    font-size: 8px; 
-    margin-bottom: 20px;
+#inputPesquisar:focus{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.topo{
+    background-color: #f10000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    max-width: 175px;
+}
+
+.btnPesquisar {
+    background-color: #f00;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer
+}
+
+.btnPesquisar:hover {
+    background-color: rgb(241, 10, 10);
 }

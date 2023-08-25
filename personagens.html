@@ -9,18 +9,25 @@
     <script type="text/javascript" src="personagens.js"></script>
     <script type="text/javascript" src="pesquisaPersonagens.js"></script>
     <link rel="stylesheet" href="carregar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 <body>
-    <header class="cont">
+    <header class="topo">
         <div class="logo">
             <img src="logo.png" alt="logo">
         </div>
     </header>
 
+    <main>
+
     <div class = "pesquisa">
-    <input type="text" id="pesquisar" placeholder="pesquisar">
-    <input type="button" id="procurar">
+    <input type="text" id="inputPesquisar" placeholder="pesquisar">
+    <button class="btnPesquisar" id="btnPesquisar">Pesquisar</button>
     </div>
+
     <div id="personagens" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
+
+    </main>
 </body>
 </html>
