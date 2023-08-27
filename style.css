@@ -64,3 +64,11 @@ body{
 .btnPesquisar:hover {
     background-color: rgb(241, 10, 10);
 }
+
+.titulo {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+}
